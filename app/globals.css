@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes rnk-slide-right{
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-rnk-slide-left {
+  animation: rnk-slide-right 0.50s ease-out forwards;
+}
+@keyframes rnk-services-down {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(21px);
+  }
+}
+
+.animate-rnk-services-down {
+  animation: rnk-services-down 0.40s ease-out forwards;
+}
+/* RNK Hero Animations */
+@keyframes rnk-hero-title {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rnk-hero-sub {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rnk-hero-cta {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* soft glowing red halo behind text */
+.rnk-hero-glow {
+  position: absolute;
+  inset: auto;
+  left: 0;
+  top: 40%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle at center, rgba(200,16,46,0.32), transparent 65%);
+  filter: blur(12px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* utility classes */
+.rnk-hero-title {
+  animation: rnk-hero-title 0.75s ease-out forwards;
+}
+.rnk-hero-sub {
+  animation: rnk-hero-sub 0.9s ease-out forwards;
+}
+.rnk-hero-cta {
+  animation: rnk-hero-cta 1.05s ease-out forwards;
+}
+/* ===== RNK HERO ANIMATIONS ===== */
+
+@keyframes hero-title-up {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-sub-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-cta-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* soft red glow behind heading */
+.hero-glow {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle at center, rgba(200,16,46,0.35), transparent 68%);
+  filter: blur(12px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* helper classes */
+.hero-title-anim {
+  animation: hero-title-up 0.75s ease-out forwards;
+}
+.hero-sub-anim {
+  animation: hero-sub-up 0.9s ease-out forwards;
+}
+.hero-cta-anim {
+  animation: hero-cta-up 1.05s ease-out forwards;
+}
+/* Hide scrollbar – Chrome, Safari, Edge */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar – Firefox, IE/Edge legacy */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
